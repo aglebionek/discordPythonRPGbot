@@ -1,6 +1,5 @@
 import discord
 from random import randrange
-import asyncio
 from player import Player
 import pickle
 import os.path
@@ -93,13 +92,21 @@ class PlayersClass:
                         break
 
             if attr in PlayersClass.players[message.author.id].__dict__.keys():
-                PlayersClass.players[message.author.id].__dict__[attr] = value
+                PlayersClass.players[message.author.id].__dict__[attr] = int(value)
 
                 with open('players.pickle', 'wb') as file:
                     pickle.dump(PlayersClass.players, file)
 
                 await message.channel.send(f"Succesfully set {attr} to {value}")
-            
+                if attr == 'zręczność':
+                    PlayersClass.players[message.author.id].__dict__['zręczność'] = int(value)/2
+                elif attr == 'edukacja':
+                    PlayersClass.players[message.author.id].__dict__['język ojczysty'] = int(value)
+                elif attr == 'dexterity':
+                    PlayersClass.players[message.author.id].__dict__['dodge'] = int(value)/2
+                elif attr == 'education':
+                    PlayersClass.players[message.author.id].__dict__['language'] = int(value)
+                    
             else:
                 await message.channel.send(f"No stat named {attr}")  
         
