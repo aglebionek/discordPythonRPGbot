@@ -3,9 +3,10 @@
 <p>Currently worked on, WIP</p>
 
 <h2>TODO</h2>
-<li>
-  <ul>Create language files for bot messages</ul>
-  <ul>Create language files for player statistics</ul>
-  <ul>Add the entire stat keeping, stat updating and rolling for stats functionality</ul>
-  <ul>In the future: add language files for bot commands</ul>
-</li>
+<ul>
+  <li>Create language files for bot messages</li>
+  <li>Create language files for player statistics</li>
+  <li>Add the entire stat keeping, stat updating and rolling for stats functionality</li>
+  <li>In the future: add language files for bot commands</li>
+</ul>
+  
