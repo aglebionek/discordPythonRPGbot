@@ -1,0 +1,13 @@
+The idea is to have everything grouped by commands and standarize what each file provides.
+
+BotClient - handles reading the messages, matching them against command regexes in BotFuntions, extracting arguments from them, passing them to 
+    appropriate command function in BotFunctions, and send the returned string to the channel.
+
+BotCommands - is a library of commands, contains regex for each of them, to make the checking for commands easier and to make
+    extracting function arguments from them easy and readable.
+
+BotFunctions - handles the "behind the scenes" calculations, has a function for each command. Always returns a string to be send out
+    to the channel by the BotClient.
+
+BotOptions - contains options that the user are most likely to change, like the language the bot answers in, the language of character skills
+    or command prefix.

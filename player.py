@@ -10,7 +10,7 @@ class Player:
             lang = kwargs["lang"]
         
         if lang == "pl":
-            information = ['imię', 'zawód', 'wiek', 'zamieszkały', 'urodzony']
+            information = ['imię', 'zawód', 'wiek', 'płeć' 'zamieszkały', 'urodzony']
             characteristics = ['siła', 'kondycja', 'budowa', 'zręczność', 'wygląd', 'edukacja', 'inteligencja', 'moc']
         else:
             information = ['name', 'occupation', 'age', 'sex', 'residence', 'birthplace']
