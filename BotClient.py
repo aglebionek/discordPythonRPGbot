@@ -12,7 +12,7 @@ class BotClient(discord.Client):
     
     async def on_ready(self):
         game = discord.Game(name = "Call of Cthulhu RPG session")
-        await client.change_presence(activity=game)        
+        await client.change_presence(activity=game)
         print('Logged in as')
         print(self.user.name)
         print(self.user.id)
@@ -29,9 +29,10 @@ class BotClient(discord.Client):
         content: str = message.content.lower()
         channel: discord.TextChannel = message.channel
         
+        #WIP
         if channel.name in BotOptions.CHARACTER_CHANNELS:
             if message.attachments:
-                if [0].filename.endswith(".json"):
+                if message.attachments[0].filename.endswith(".json"):
                     await channel.send("gocha")
         
         if content.startswith(BotOptions.COMMAND_PREFIX):           
@@ -50,7 +51,7 @@ class BotClient(discord.Client):
                 await channel.send(f"There are more than one matches found, please choose from {matches}.")
             else:
                 command_name, match = matches[0]
-                await channel.send(await vars(BotFunctions)[command_name](match))                
+                await channel.send(await vars(BotFunctions)[command_name](match))               
 
 if __name__ == "__main__":
     client = BotClient()
