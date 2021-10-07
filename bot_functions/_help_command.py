@@ -1,7 +1,5 @@
-import re
-
 from BotOptions import COMMAND_PREFIX
-async def help_command(match: re.Match) -> str:
+async def help_command() -> str:
     commands = ''
     
     # dice_roll

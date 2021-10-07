@@ -1,0 +1,10 @@
+Funtions:
+    test skill
+    create player
+    change skill value
+    remove a player
+    select campaign
+    create campaign
+    delete campaign
+    increase skill
+    
